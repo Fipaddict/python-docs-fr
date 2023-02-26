@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-23 16:16+0200\n"
-"PO-Revision-Date: 2021-12-11 17:18+0100\n"
+"POT-Creation-Date: 2022-10-18 15:46+0200\n"
+"PO-Revision-Date: 2022-10-18 15:59+0200\n"
 "Last-Translator: Julien Palard <julien@palard.fr>\n"
 "Language-Team: FRENCH <traductions@lists.afpy.org>\n"
 "Language: fr\n"
@@ -126,13 +126,14 @@ msgid "Distutils based source distributions"
 msgstr "Distributions basées sur *distutils*"
 
 #: install/index.rst:64
+#, fuzzy
 msgid ""
 "If you download a module source distribution, you can tell pretty quickly if "
 "it was packaged and distributed in the standard way, i.e. using the "
 "Distutils. First, the distribution's name and version number will be "
 "featured prominently in the name of the downloaded archive, e.g. :file:"
 "`foo-1.0.tar.gz` or :file:`widget-0.9.7.zip`.  Next, the archive will unpack "
-"into a similarly-named directory: :file:`foo-1.0` or :file:`widget-0.9.7`.  "
+"into a similarly named directory: :file:`foo-1.0` or :file:`widget-0.9.7`.  "
 "Additionally, the distribution will contain a setup script :file:`setup.py`, "
 "and a file named :file:`README.txt` or possibly just :file:`README`, which "
 "should explain that building and installing the module distribution is a "
@@ -471,8 +472,8 @@ msgstr ""
 
 #: install/index.rst:234
 msgid ""
-"The default installation directory on Windows was :file:`C:\\\\Program Files"
-"\\\\Python` under Python 1.6a1, 1.5.2, and earlier."
+"The default installation directory on Windows was :file:`C:\\\\Program "
+"Files\\\\Python` under Python 1.6a1, 1.5.2, and earlier."
 msgstr ""
 "Sous Windows, le dossier d'installation par défaut était : :file:`C:\\"
 "\\Program Files\\\\Python` sous Python 1.6a1, 1.5.2 et avant."
@@ -705,7 +706,7 @@ msgstr ""
 "ajouter :file:`{userbase}/include` dans les chemins où le compilateur "
 "recherche les fichiers d'en-têtes et :file:`{userbase}/lib` dans les chemins "
 "où le compilateur recherche les bibliothèques ainsi que les bibliothèques C "
-"partagées chargeables à l'exécution (`rpath`)."
+"partagées chargeables à l'exécution (``rpath``)."
 
 #: install/index.rst:352
 msgid "Alternate installation: the home scheme"
@@ -1290,7 +1291,7 @@ msgstr ""
 
 #: install/index.rst:744
 msgid ":file:`{prefix}/lib/python{ver}/distutils/distutils.cfg`"
-msgstr ""
+msgstr ":file:`{prefix}/lib/python{ver}/distutils/distutils.cfg`"
 
 #: install/index.rst:758
 msgid "personal"
@@ -1298,7 +1299,7 @@ msgstr ""
 
 #: install/index.rst:746
 msgid ":file:`$HOME/.pydistutils.cfg`"
-msgstr ""
+msgstr ":file:`$HOME/.pydistutils.cfg`"
 
 #: install/index.rst:760
 msgid "local"
@@ -1306,7 +1307,7 @@ msgstr ""
 
 #: install/index.rst:760
 msgid ":file:`setup.cfg`"
-msgstr ""
+msgstr ":file:`setup.cfg`"
 
 #: install/index.rst:760
 msgid "\\(3)"
@@ -1318,7 +1319,7 @@ msgstr ""
 
 #: install/index.rst:756
 msgid ":file:`{prefix}\\\\Lib\\\\distutils\\\\distutils.cfg`"
-msgstr ""
+msgstr ":file:`{prefix}\\\\Lib\\\\distutils\\\\distutils.cfg`"
 
 #: install/index.rst:756
 msgid "\\(4)"
@@ -1326,7 +1327,7 @@ msgstr "\\(4)"
 
 #: install/index.rst:758
 msgid ":file:`%HOME%\\\\pydistutils.cfg`"
-msgstr ""
+msgstr ":file:`%HOME%\\\\pydistutils.cfg`"
 
 #: install/index.rst:758
 msgid "\\(5)"
@@ -1335,7 +1336,7 @@ msgstr "\\(5)"
 #: install/index.rst:763
 msgid ""
 "On all platforms, the \"personal\" file can be temporarily disabled by "
-"passing the `--no-user-cfg` option."
+"passing the ``--no-user-cfg`` option."
 msgstr ""
 
 #: install/index.rst:769
@@ -1548,9 +1549,9 @@ msgid ""
 "appended to the proper command line, so in the above example the compiler "
 "will be passed the :option:`!-o32` option, and the linker will be passed :"
 "option:`!-shared`.  If a compiler option requires an argument, you'll have "
-"to supply multiple :option:`!-Xcompiler` options; for example, to pass ``-x c"
-"++`` the :file:`Setup` file would have to contain ``-Xcompiler -x -Xcompiler "
-"c++``."
+"to supply multiple :option:`!-Xcompiler` options; for example, to pass ``-x "
+"c++`` the :file:`Setup` file would have to contain ``-Xcompiler -x -"
+"Xcompiler c++``."
 msgstr ""
 
 #: install/index.rst:936
@@ -1721,8 +1722,8 @@ msgstr ""
 
 #: install/index.rst:1065
 msgid ""
-"`Building Python modules on MS Windows platform with MinGW <http://old.zope."
-"org/Members/als/tips/win32_mingw_modules>`_"
+"`Building Python modules on MS Windows platform with MinGW <https://old.zope."
+"dev/Members/als/tips/win32_mingw_modules>`_"
 msgstr ""
 
 #: install/index.rst:1066

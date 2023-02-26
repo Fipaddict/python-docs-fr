@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-23 16:16+0200\n"
+"POT-Creation-Date: 2022-10-18 15:46+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: FRENCH <traductions@lists.afpy.org>\n"
@@ -65,9 +65,9 @@ msgstr ""
 
 #: c-api/module.rst:67
 msgid ""
-"It is recommended extensions use other :c:func:`PyModule_\\*` and :c:func:"
-"`PyObject_\\*` functions rather than directly manipulate a module's :attr:"
-"`~object.__dict__`."
+"It is recommended extensions use other ``PyModule_*`` and ``PyObject_*`` "
+"functions rather than directly manipulate a module's :attr:`~object."
+"__dict__`."
 msgstr ""
 
 #: c-api/module.rst:78
@@ -510,7 +510,7 @@ msgstr ""
 
 #: c-api/module.rst:506
 msgid "Example usage::"
-msgstr ""
+msgstr "Exemple d'utilisation ::"
 
 #: c-api/module.rst:524
 msgid ""

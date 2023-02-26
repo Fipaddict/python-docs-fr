@@ -5,18 +5,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-19 16:59+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2022-10-18 15:46+0200\n"
+"PO-Revision-Date: 2022-05-06 18:42-0400\n"
+"Last-Translator: Nicolas Haller <python@haller.im>\n"
 "Language-Team: FRENCH <traductions@lists.afpy.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: library/syslog.rst:2
 msgid ":mod:`syslog` --- Unix syslog library routines"
-msgstr ""
+msgstr ":mod:`syslog` --- Routines de bibliothèque *syslog* Unix"
 
 #: library/syslog.rst:10
 msgid ""
@@ -24,6 +25,8 @@ msgid ""
 "Refer to the Unix manual pages for a detailed description of the ``syslog`` "
 "facility."
 msgstr ""
+"Ce module fournit une interface aux routines de la bibliothèque ``syslog`` "
+"Unix. Consultez les pages du manuel Unix pour plus de détails sur ``syslog``."
 
 #: library/syslog.rst:14
 msgid ""
@@ -31,6 +34,10 @@ msgid ""
 "library that can speak to a syslog server is available in the :mod:`logging."
 "handlers` module as :class:`SysLogHandler`."
 msgstr ""
+"Ce module interagit avec l'ensemble des routines du journaliseur système "
+"``syslog``.  Une bibliothèque écrite exclusivement en Python est également "
+"disponible pour parler à un serveur *syslog* dans le module :mod:`logging."
+"handlers` sous le nom :class:`SysLogHandler`."
 
 #: library/syslog.rst:18
 msgid "The module defines the following functions:"
@@ -45,27 +52,49 @@ msgid ""
 "not encoded in *priority* using logical-or (``LOG_INFO | LOG_USER``), the "
 "value given in the :func:`openlog` call is used."
 msgstr ""
+"Envoie la chaîne de caractères *message* au journaliseur système. Un retour "
+"à la ligne est ajouté à la fin du message si nécessaire. Chaque message est "
+"marqué avec une priorité constituée d'une *fonction* et d'un *niveau*. "
+"L'argument optionnel *priority*, qui par défaut est :const:`LOG_INFO`, "
+"définit la priorité du message. Si la fonction n'est pas encodée dans "
+"*priority* en utilisant un OU logique (``LOG_INFO | LOG_USER``), la valeur "
+"donnée lors de l'appel à :func:`openlog` est utilisée."
 
 #: library/syslog.rst:31
+#, fuzzy
 msgid ""
-"If :func:`openlog` has not been called prior to the call to :func:`syslog`, "
-"``openlog()`` will be called with no arguments."
+"If :func:`openlog` has not been called prior to the call to :func:`syslog`, :"
+"func:`openlog` will be called with no arguments."
 msgstr ""
+"Si :func:`openlog` n'a pas été appelé avant :func:`syslog`, ``openlog()`` "
+"sera appelée sans argument."
 
 #: library/syslog.rst:34
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``syslog.syslog`` with arguments "
 "``priority``, ``message``."
 msgstr ""
+"Lève un :ref:`évènement d'audit <auditing>` ``syslog.syslog`` avec les "
+"arguments ``priority``, ``message``."
 
-#: library/syslog.rst:39
+#: library/syslog.rst:36
+msgid ""
+"In previous versions, :func:`openlog` would not be called automatically if "
+"it wasn't called prior to the call to :func:`syslog`, deferring to the "
+"syslog implementation to call ``openlog()``."
+msgstr ""
+
+#: library/syslog.rst:44
 msgid ""
 "Logging options of subsequent :func:`syslog` calls can be set by calling :"
 "func:`openlog`.  :func:`syslog` will call :func:`openlog` with no arguments "
 "if the log is not currently open."
 msgstr ""
+"Les options de journalisation utilisées lors des appels à :func:`syslog` "
+"peuvent être définies en appelant :func:`openlog`.  :func:`syslog` "
+"appellera :func:`openlog` sans argument si le journal n'est pas déjà ouvert."
 
-#: library/syslog.rst:43
+#: library/syslog.rst:48
 msgid ""
 "The optional *ident* keyword argument is a string which is prepended to "
 "every message, and defaults to ``sys.argv[0]`` with leading path components "
@@ -74,40 +103,57 @@ msgid ""
 "keyword argument (default is :const:`LOG_USER`) sets the default facility "
 "for messages which do not have a facility explicitly encoded."
 msgstr ""
+"L'argument nommé optionnel *ident* est une chaîne de caractères qui est "
+"ajoutée au début de chaque message. Par défaut, le dernier élément du chemin "
+"définit dans ``sys.argv[0]`` est utilisé.  L'argument nommé optionnel "
+"*logoption* est un champ de bits (défini à 0 par défaut) -- Voir ci-dessous "
+"pour les combinaisons possibles.  L'argument nommé optionnel *facility* "
+"définit la fonction à utiliser pour les messages qui n'en définissent pas. "
+"Par défaut, :const:`LOG_USER` est utilisée."
 
-#: library/syslog.rst:50
+#: library/syslog.rst:55
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``syslog.openlog`` with arguments "
 "``ident``, ``logoption``, ``facility``."
 msgstr ""
+"Lève un :ref:`évènement d'audit <auditing>` ``syslog.openlog`` avec les "
+"arguments ``ident``, ``logoption``, ``facility``."
 
-#: library/syslog.rst:52
+#: library/syslog.rst:57
 msgid ""
 "In previous versions, keyword arguments were not allowed, and *ident* was "
-"required.  The default for *ident* was dependent on the system libraries, "
-"and often was ``python`` instead of the name of the Python program file."
+"required."
 msgstr ""
 
-#: library/syslog.rst:60
+#: library/syslog.rst:64
 msgid ""
 "Reset the syslog module values and call the system library ``closelog()``."
 msgstr ""
+"Réinitialise la configuration du module *syslog* et appelle la bibliothèque "
+"système ``closelog()``."
 
-#: library/syslog.rst:62
+#: library/syslog.rst:66
 msgid ""
 "This causes the module to behave as it does when initially imported.  For "
 "example, :func:`openlog` will be called on the first :func:`syslog` call "
 "(if :func:`openlog` hasn't already been called), and *ident* and other :func:"
 "`openlog` parameters are reset to defaults."
 msgstr ""
+"Cet appel permet au module de se comporter comme lors de son import "
+"initial.  Par exemple, :func:`openlog` sera appelée lors du premier appel à :"
+"func:`syslog` (sauf si :func:`openlog` a déjà été appelée). Quant à *ident* "
+"et aux paramètres de :func:`openlog`, ceux-ci seront réinitialisés à leur "
+"valeur par défaut."
 
-#: library/syslog.rst:67
+#: library/syslog.rst:71
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``syslog.closelog`` with no "
 "arguments."
 msgstr ""
+"Lève un :ref:`évènement d'audit <auditing>` ``syslog.closelog`` sans "
+"argument."
 
-#: library/syslog.rst:72
+#: library/syslog.rst:76
 msgid ""
 "Set the priority mask to *maskpri* and return the previous mask value.  "
 "Calls to :func:`syslog` with a priority level not set in *maskpri* are "
@@ -116,66 +162,99 @@ msgid ""
 "The function ``LOG_UPTO(pri)`` calculates the mask for all priorities up to "
 "and including *pri*."
 msgstr ""
+"Définit le masque de priorité à la valeur *maskpri* et retourne la "
+"précédente valeur du masque.  Les appels à :func:`syslog` avec un niveau de "
+"priorité non présent dans *maskpri* seront ignorés.  La fonction "
+"``LOG_MASK(pri)`` calcule le masque pour la priorité *pri*.  La fonction "
+"``LOG_UPTO(pri)`` calcule le masque pour toutes les priorités jusqu'à *pri* "
+"(inclus)."
 
-#: library/syslog.rst:79
+#: library/syslog.rst:83
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``syslog.setlogmask`` with "
 "argument ``maskpri``."
 msgstr ""
+"Lève un :ref:`évènement d'audit <auditing>` ``syslog.setlogmask`` avec "
+"l'argument ``maskpri``."
 
-#: library/syslog.rst:81
+#: library/syslog.rst:85
 msgid "The module defines the following constants:"
-msgstr ""
+msgstr "Le module définit les constantes suivantes :"
 
-#: library/syslog.rst:86
+#: library/syslog.rst:90
 msgid "Priority levels (high to low):"
-msgstr ""
+msgstr "Niveau de priorités (décroissant) :"
 
-#: library/syslog.rst:84
+#: library/syslog.rst:88
 msgid ""
 ":const:`LOG_EMERG`, :const:`LOG_ALERT`, :const:`LOG_CRIT`, :const:"
 "`LOG_ERR`, :const:`LOG_WARNING`, :const:`LOG_NOTICE`, :const:`LOG_INFO`, :"
 "const:`LOG_DEBUG`."
 msgstr ""
+":const:`LOG_EMERG`, :const:`LOG_ALERT`, :const:`LOG_CRIT`, :const:"
+"`LOG_ERR`, :const:`LOG_WARNING`, :const:`LOG_NOTICE`, :const:`LOG_INFO`, :"
+"const:`LOG_DEBUG`."
+
+#: library/syslog.rst:97
+msgid "Facilities:"
+msgstr "Fonctions :"
 
 #: library/syslog.rst:93
-msgid "Facilities:"
-msgstr ""
-
-#: library/syslog.rst:89
 msgid ""
 ":const:`LOG_KERN`, :const:`LOG_USER`, :const:`LOG_MAIL`, :const:"
 "`LOG_DAEMON`, :const:`LOG_AUTH`, :const:`LOG_LPR`, :const:`LOG_NEWS`, :const:"
 "`LOG_UUCP`, :const:`LOG_CRON`, :const:`LOG_SYSLOG`, :const:`LOG_LOCAL0` to :"
 "const:`LOG_LOCAL7`, and, if defined in ``<syslog.h>``, :const:`LOG_AUTHPRIV`."
 msgstr ""
+":const:`LOG_KERN`, :const:`LOG_USER`, :const:`LOG_MAIL`, :const:"
+"`LOG_DAEMON`, :const:`LOG_AUTH`, :const:`LOG_LPR`, :const:`LOG_NEWS`, :const:"
+"`LOG_UUCP`, :const:`LOG_CRON`, :const:`LOG_SYSLOG`, :const:`LOG_LOCAL0` à :"
+"const:`LOG_LOCAL7` et, si défini dans ``<syslog.h>``, :const:`LOG_AUTHPRIV`."
 
-#: library/syslog.rst:99
+#: library/syslog.rst:103
 msgid "Log options:"
-msgstr ""
+msgstr "Options de journalisation :"
 
-#: library/syslog.rst:96
+#: library/syslog.rst:100
 msgid ""
 ":const:`LOG_PID`, :const:`LOG_CONS`, :const:`LOG_NDELAY`, and, if defined in "
 "``<syslog.h>``, :const:`LOG_ODELAY`, :const:`LOG_NOWAIT`, and :const:"
 "`LOG_PERROR`."
 msgstr ""
+":const:`LOG_PID`, :const:`LOG_CONS`, :const:`LOG_NDELAY` et, si défini dans "
+"``<syslog.h>``, :const:`LOG_ODELAY`, :const:`LOG_NOWAIT` et :const:"
+"`LOG_PERROR`."
 
-#: library/syslog.rst:102
+#: library/syslog.rst:106
 msgid "Examples"
 msgstr "Exemples"
 
-#: library/syslog.rst:105
+#: library/syslog.rst:109
 msgid "Simple example"
-msgstr ""
+msgstr "Exemple simple"
 
-#: library/syslog.rst:107
+#: library/syslog.rst:111
 msgid "A simple set of examples::"
-msgstr ""
+msgstr "Un simple jeu d'exemples ::"
 
-#: library/syslog.rst:115
+#: library/syslog.rst:119
 msgid ""
 "An example of setting some log options, these would include the process ID "
 "in logged messages, and write the messages to the destination facility used "
 "for mail logging::"
 msgstr ""
+"Un exemple montrant comment définir certaines options de journalisation. Ces "
+"options ajoutent l'identifiant du processus (*PID*) dans les messages "
+"journalisés et écrivent ces messages à l'aide de la fonction utilisée pour "
+"la journalisation des systèmes de messagerie ::"
+
+#, fuzzy
+#~ msgid ""
+#~ "In previous versions, keyword arguments were not allowed, and *ident* was "
+#~ "required.  The default for *ident* was dependent on the system libraries, "
+#~ "and often was ``python`` instead of the name of the Python program file."
+#~ msgstr ""
+#~ "Dans les versions précédentes, les arguments nommés n'étaient pas "
+#~ "autorisés et *ident* était requis.  La valeur par défaut pour *ident* "
+#~ "dépendait des bibliothèques systèmes et été parfois définie à ``python`` "
+#~ "au lieu d'utiliser le nom du fichier du programme Python."

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-21 15:04+0200\n"
+"POT-Creation-Date: 2022-04-05 10:05+0200\n"
 "PO-Revision-Date: 2021-03-21 16:06+0100\n"
 "Last-Translator: Loc Cosnier <loc.cosnier@pm.me>\n"
 "Language-Team: FRENCH <traductions@lists.afpy.org>\n"
@@ -427,7 +427,7 @@ msgstr "``aclose``, ``__aiter__``, ``__anext__``"
 
 #: library/collections.abc.rst:184
 msgid "Footnotes"
-msgstr ""
+msgstr "Notes"
 
 #: library/collections.abc.rst:185
 msgid ""
@@ -658,7 +658,7 @@ msgstr ""
 
 #: library/collections.abc.rst:350
 msgid "Examples and Recipes"
-msgstr ""
+msgstr "Exemples et recettes"
 
 #: library/collections.abc.rst:352
 #, fuzzy

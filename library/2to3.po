@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-31 11:33+0100\n"
-"PO-Revision-Date: 2021-04-29 13:57+0200\n"
+"POT-Creation-Date: 2022-10-18 15:46+0200\n"
+"PO-Revision-Date: 2022-10-18 15:44+0200\n"
 "Last-Translator: Dimitri Merejkowsky <dimitri@dmerej.info>\n"
 "Language-Team: FRENCH <traductions@lists.afpy.org>\n"
 "Language: fr\n"
@@ -16,7 +16,8 @@ msgstr ""
 "X-Generator: Poedit 2.4.1\n"
 
 #: library/2to3.rst:4
-msgid "2to3 - Automated Python 2 to 3 code translation"
+#, fuzzy
+msgid "2to3 --- Automated Python 2 to 3 code translation"
 msgstr "*2to3* — Traduction automatique de code en Python 2 vers Python 3"
 
 #: library/2to3.rst:8
@@ -206,10 +207,10 @@ msgid ""
 msgstr ""
 "L'option :option:`!-W` ou :option:`!—write-unchanged-files` indique à *2to3* "
 "de toujours écrire des fichiers de sortie même si aucun changement du "
-"fichier n'était nécessaire.  Ceci est très utile avec `!-o` pour qu'un arbre "
-"des sources Python entier soit copié avec la traduction d'un répertoire à "
-"l'autre. Cette option implique :option:`!-w` sans quoi elle n'aurait pas de "
-"sens."
+"fichier n'était nécessaire.  Ceci est très utile avec :option:`!-o` pour "
+"qu'un arbre des sources Python entier soit copié avec la traduction d'un "
+"répertoire à l'autre. Cette option implique :option:`!-w` sans quoi elle "
+"n'aurait pas de sens."
 
 #: library/2to3.rst:119
 msgid "The :option:`!-W` flag was added."
@@ -767,7 +768,8 @@ msgstr ""
 "désactivé lorsque ``from future_builtins import zip`` apparaît."
 
 #: library/2to3.rst:455
-msgid ":mod:`lib2to3` - 2to3's library"
+#, fuzzy
+msgid ":mod:`lib2to3` --- 2to3's library"
 msgstr ":mod:`lib2to3` — la bibliothèque de *2to3*"
 
 #: library/2to3.rst:464

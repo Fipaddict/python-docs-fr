@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-01 16:00+0200\n"
+"POT-Creation-Date: 2022-10-18 15:46+0200\n"
 "PO-Revision-Date: 2019-11-01 17:35+0100\n"
 "Last-Translator: Lcaracol <lcaracol@riseup.net>\n"
 "Language-Team: FRENCH <traductions@lists.afpy.org>\n"
@@ -208,7 +208,7 @@ msgid ""
 "a subsequent call to put() will not block."
 msgstr ""
 "Renvoie ``True`` si la file est pleine, ``False`` sinon.  Si ``full()`` "
-"renvoie``True``, cela ne garantit pas qu'un appel ultérieur à ``get()`` ne "
+"renvoie ``True``, cela ne garantit pas qu'un appel ultérieur à ``get()`` ne "
 "sera pas bloquant.  Similairement, si ``full()`` retourne ``False``, cela ne "
 "garantit pas qu'un appel ultérieur à ``put()`` ne sera pas bloquant."
 
@@ -233,7 +233,8 @@ msgstr ""
 "`Full` (*timeout* est ignoré dans ce cas)."
 
 #: library/queue.rst:141
-msgid "Equivalent to ``put(item, False)``."
+#, fuzzy
+msgid "Equivalent to ``put(item, block=False)``."
 msgstr "Équivalent à ``put(item, False)``."
 
 #: library/queue.rst:146
@@ -378,10 +379,20 @@ msgstr ""
 "d'allocation de mémoire). Les arguments optionnels *block* et *timeout* sont "
 "ignorés et fournis uniquement pour la compatibilité avec :meth:`Queue.put`."
 
-#: library/queue.rst:252
+#: library/queue.rst:243
 msgid ""
-"Equivalent to ``put(item)``, provided for compatibility with :meth:`Queue."
-"put_nowait`."
+"This method has a C implementation which is reentrant.  That is, a ``put()`` "
+"or ``get()`` call can be interrupted by another ``put()`` call in the same "
+"thread without deadlocking or corrupting internal state inside the queue.  "
+"This makes it appropriate for use in destructors such as ``__del__`` methods "
+"or :mod:`weakref` callbacks."
+msgstr ""
+
+#: library/queue.rst:252
+#, fuzzy
+msgid ""
+"Equivalent to ``put(item, block=False)``, provided for compatibility with :"
+"meth:`Queue.put_nowait`."
 msgstr ""
 "Équivalent de ``put(item)``, fourni pour la compatibilité avec :meth:`Queue."
 "put_nowait`."
