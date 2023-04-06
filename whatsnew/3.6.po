@@ -1707,7 +1707,7 @@ msgstr ""
 
 #: whatsnew/3.6.rst:2025
 msgid "re"
-msgstr ""
+msgstr "``re``"
 
 #: whatsnew/3.6.rst:1347
 msgid ""
@@ -2279,9 +2279,8 @@ msgid ""
 msgstr ""
 
 #: whatsnew/3.6.rst:1779
-#, fuzzy
 msgid "Optimizations"
-msgstr "Optimisation"
+msgstr "Optimisations"
 
 #: whatsnew/3.6.rst:1781
 msgid ""

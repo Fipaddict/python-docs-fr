@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-18 15:46+0200\n"
+"POT-Creation-Date: 2023-03-22 22:57+0100\n"
 "PO-Revision-Date: 2020-11-25 20:35+0100\n"
 "Language-Team: FRENCH <traductions@lists.afpy.org>\n"
 "Language: fr\n"
@@ -384,9 +384,8 @@ msgid ""
 msgstr ""
 
 #: library/socket.rst:246
-#, fuzzy
 msgid "Module contents"
-msgstr "Contenu du module"
+msgstr "Classe de données"
 
 #: library/socket.rst:248
 msgid "The module :mod:`socket` exports the following elements."
@@ -663,9 +662,8 @@ msgid ""
 msgstr ""
 
 #: library/socket.rst:554
-#, fuzzy
 msgid ":ref:`Availability <availability>`: Linux >= 4.7."
-msgstr ":ref:`Disponibilité <availability>` : Linux >= 4.8."
+msgstr ":ref:`Disponibilité <availability>` : Linux 4.7+"
 
 #: library/socket.rst:557
 msgid "Functions"
@@ -822,7 +820,7 @@ msgstr ""
 #: library/socket.rst:672
 msgid ""
 "*family* should be either :data:`AF_INET` or :data:`AF_INET6`. *backlog* is "
-"the queue size passed to :meth:`socket.listen`; when ``0`` a default "
+"the queue size passed to :meth:`socket.listen`; if not specified , a default "
 "reasonable value is chosen. *reuse_port* dictates whether to set the :data:"
 "`SO_REUSEPORT` socket option."
 msgstr ""
@@ -1568,7 +1566,7 @@ msgstr ""
 
 #: library/socket.rst:0
 msgid "platform"
-msgstr ""
+msgstr "``platform``"
 
 #: library/socket.rst:1360
 msgid "Windows"

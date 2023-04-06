@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-18 15:46+0200\n"
+"POT-Creation-Date: 2023-03-22 22:57+0100\n"
 "PO-Revision-Date: 2022-05-18 13:31+0200\n"
 "Last-Translator: Jean Abou Samra <jean@abou-samra.fr>\n"
 "Language-Team: FRENCH <traductions@lists.afpy.org>\n"
@@ -327,15 +327,14 @@ msgid "attribute"
 msgstr "attribut"
 
 #: glossary.rst:139
-#, fuzzy
 msgid ""
 "A value associated with an object which is usually referenced by name using "
 "dotted expressions. For example, if an object *o* has an attribute *a* it "
 "would be referenced as *o.a*."
 msgstr ""
-"Valeur associée à un objet et désignée par son nom via une notation "
-"utilisant des points. Par exemple, si un objet *o* possède un attribut *a*, "
-"il sera référencé par *o.a*."
+"Valeur associée à un objet et habituellement désignée par son nom *via* une "
+"notation utilisant des points. Par exemple, si un objet *o* possède un "
+"attribut *a*, cet attribut est référencé par *o.a*."
 
 #: glossary.rst:144
 msgid ""
@@ -345,6 +344,11 @@ msgid ""
 "using a dotted expression, and would instead need to be retrieved with :func:"
 "`getattr`."
 msgstr ""
+"Il est possible de donner à un objet un attribut dont le nom n'est pas un "
+"identifiant tel que défini pour les :ref:`identifiers`, par exemple en "
+"utilisant :func:`setattr`, si l'objet le permet. Un tel attribut ne sera pas "
+"accessible à l'aide d'une expression pointée et on devra y accéder avec :"
+"func:`getattr`."
 
 #: glossary.rst:149
 msgid "awaitable"
@@ -502,15 +506,16 @@ msgstr ""
 "instructions du code intermédiaire."
 
 #: glossary.rst:212
-#, fuzzy
 msgid "callable"
-msgstr "fonction de rappel"
+msgstr "appelable (*callable*)"
 
 #: glossary.rst:214
 msgid ""
 "A callable is an object that can be called, possibly with a set of arguments "
 "(see :term:`argument`), with the following syntax::"
 msgstr ""
+"Un appelable est un objet qui peut être appelé, éventuellement avec un "
+"ensemble d'arguments (voir  :term:`argument`), avec la syntaxe suivante ::"
 
 #: glossary.rst:219
 msgid ""
@@ -518,6 +523,9 @@ msgid ""
 "instance of a class that implements the :meth:`~object.__call__` method is "
 "also a callable."
 msgstr ""
+"Une :term:`fonction <function>`, et par extension une :term:`méthode "
+"<method>`, est un appelable. Une instance d'une classe qui implémente la "
+"méthode :meth:`~object.__call__` est également un appelable."
 
 #: glossary.rst:222
 msgid "callback"
@@ -1034,6 +1042,11 @@ msgid ""
 "filesystem_encoding` and :c:member:`~PyConfig.filesystem_errors` members of :"
 "c:type:`PyConfig`."
 msgstr ""
+"L':term:`encodage du système de fichiers et gestionnaire d'erreurs associé "
+"<filesystem encoding and error handler>` sont configurés au démarrage de "
+"Python par la fonction :c:func:`PyConfig_Read` : regardez :c:member:"
+"`~PyConfig.filesystem_encoding` et :c:member:`~PyConfig.filesystem_errors` "
+"dans les membres de :c:type:`PyConfig`."
 
 #: glossary.rst:437
 msgid "See also the :term:`locale encoding`."
@@ -1319,7 +1332,6 @@ msgstr ""
 "machines ayant plusieurs processeurs."
 
 #: glossary.rst:561
-#, fuzzy
 msgid ""
 "However, some extension modules, either standard or third-party, are "
 "designed so as to release the GIL when doing computationally intensive tasks "
@@ -1329,7 +1341,7 @@ msgstr ""
 "Cependant, certains modules d'extension, standards ou non, sont conçus de "
 "manière à libérer le GIL lorsqu'ils effectuent des tâches lourdes tel que la "
 "compression ou le hachage. De la même manière, le GIL est toujours libéré "
-"lors des entrées / sorties."
+"lors des entrées-sorties."
 
 #: glossary.rst:566
 msgid ""
@@ -1408,14 +1420,14 @@ msgid "IDLE"
 msgstr "IDLE"
 
 #: glossary.rst:596
-#, fuzzy
 msgid ""
 "An Integrated Development and Learning Environment for Python. :ref:`idle` "
 "is a basic editor and interpreter environment which ships with the standard "
 "distribution of Python."
 msgstr ""
-"Environnement de développement intégré pour Python. IDLE est un éditeur "
-"basique et un interpréteur livré avec la distribution standard de Python."
+"Environnement d'apprentissage et de développement intégré pour Python. :ref:"
+"`IDLE <idle>` est un éditeur basique et un interpréteur livré avec la "
+"distribution standard de Python."
 
 #: glossary.rst:599
 msgid "immutable"
@@ -2140,9 +2152,10 @@ msgid "package"
 msgstr "paquet"
 
 #: glossary.rst:895
+#, fuzzy
 msgid ""
 "A Python :term:`module` which can contain submodules or recursively, "
-"subpackages.  Technically, a package is a Python module with an ``__path__`` "
+"subpackages.  Technically, a package is a Python module with a ``__path__`` "
 "attribute."
 msgstr ""
 ":term:`module` Python qui peut contenir des sous-modules ou des sous-"
@@ -2715,18 +2728,27 @@ msgid ""
 "``U+0000``--``U+10FFFF``). To store or transfer a string, it needs to be "
 "serialized as a sequence of bytes."
 msgstr ""
+"Une chaîne de caractères en Python est une suite de points de code Unicode "
+"(dans l'intervalle ``U+0000``--``U+10FFFF``). Pour stocker ou transmettre "
+"une chaîne, il est nécessaire de la sérialiser en suite d'octets."
 
 #: glossary.rst:1160
 msgid ""
 "Serializing a string into a sequence of bytes is known as \"encoding\", and "
 "recreating the string from the sequence of bytes is known as \"decoding\"."
 msgstr ""
+"Sérialiser une chaîne de caractères en une suite d'octets s'appelle "
+"« encoder » et recréer la chaîne à partir de la suite d'octets s'appelle "
+"« décoder »."
 
 #: glossary.rst:1163
 msgid ""
 "There are a variety of different text serialization :ref:`codecs <standard-"
 "encodings>`, which are collectively referred to as \"text encodings\"."
 msgstr ""
+"Il existe de multiples :ref:`codecs <standard-encodings>` pour la "
+"sérialisation de texte, que l'on regroupe sous l'expression « encodages de "
+"texte »."
 
 #: glossary.rst:1166
 msgid "text file"

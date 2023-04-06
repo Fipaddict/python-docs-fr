@@ -62,13 +62,14 @@ msgid ""
 msgstr ""
 
 #: library/asyncio-queue.rst:39
-#, fuzzy
 msgid "Removed the *loop* parameter."
-msgstr "Le paramètre *loop*."
+msgstr "Suppression du paramètre *loop*."
 
 #: library/asyncio-queue.rst:43
 msgid "This class is :ref:`not thread safe <asyncio-multithreading>`."
 msgstr ""
+"Cette classe n'est :ref:`pas conçue pour un contexte multi-fils <asyncio-"
+"multithreading>`."
 
 #: library/asyncio-queue.rst:47
 msgid "Number of items allowed in the queue."

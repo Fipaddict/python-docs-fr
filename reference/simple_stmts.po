@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-05 10:05+0200\n"
+"POT-Creation-Date: 2023-03-22 22:57+0100\n"
 "PO-Revision-Date: 2021-09-04 02:24+0200\n"
 "Last-Translator: Jean Abou Samra <jean@abou-samra.fr>\n"
 "Language-Team: FRENCH <traductions@lists.afpy.org>\n"
@@ -136,7 +136,7 @@ msgstr ""
 
 #: reference/simple_stmts.rst:127
 msgid "Else:"
-msgstr ""
+msgstr "Sinon :"
 
 #: reference/simple_stmts.rst:129
 msgid ""
@@ -470,8 +470,9 @@ msgstr ""
 "d'une assignation optionnelle :"
 
 #: reference/simple_stmts.rst:333
+#, fuzzy
 msgid ""
-"The difference from normal :ref:`assignment` is that only single target is "
+"The difference from normal :ref:`assignment` is that only a single target is "
 "allowed."
 msgstr ""
 "La différence avec une assignation normale (voir :ref:`ci-dessus "
@@ -554,9 +555,10 @@ msgstr ""
 "outils d'analyse statique et les EDIs."
 
 #: reference/simple_stmts.rst:367
+#, fuzzy
 msgid ""
-"Now annotated assignments allow same expressions in the right hand side as "
-"the regular assignments. Previously, some expressions (like un-parenthesized "
+"Now annotated assignments allow the same expressions in the right hand side "
+"as regular assignments. Previously, some expressions (like un-parenthesized "
 "tuple expressions) caused a syntax error."
 msgstr ""
 "Dorénavant, côté droit des assignations annotées, peuvent figurer les mêmes "
@@ -794,17 +796,16 @@ msgid "The :keyword:`!raise` statement"
 msgstr "L'instruction :keyword:`!raise`"
 
 #: reference/simple_stmts.rst:564
-#, fuzzy
 msgid ""
 "If no expressions are present, :keyword:`raise` re-raises the exception that "
 "is currently being handled, which is also known as the *active exception*. "
 "If there isn't currently an active exception, a :exc:`RuntimeError` "
 "exception is raised indicating that this is an error."
 msgstr ""
-"Si aucune expression n'est présente, :keyword:`raise` propage la dernière "
-"exception active dans la portée courante. Si aucune exception n'est active "
-"dans la portée courante, une exception :exc:`RuntimeError` est levée, "
-"indiquant que c'est une erreur."
+"Si aucune expression n'est présente, :keyword:`raise` propage l'exception en "
+"cours de traitement, aussi dénommée *exception active*. Si aucune exception "
+"n'est active, une exception :exc:`RuntimeError` est levée, indiquant que "
+"c'est une erreur."
 
 #: reference/simple_stmts.rst:569
 msgid ""
@@ -827,7 +828,6 @@ msgstr ""
 "la :dfn:`value` est l'instance elle-même."
 
 #: reference/simple_stmts.rst:579
-#, fuzzy
 msgid ""
 "A traceback object is normally created automatically when an exception is "
 "raised and attached to it as the :attr:`__traceback__` attribute, which is "
@@ -840,8 +840,9 @@ msgstr ""
 "exception est levée et il lui est rattaché comme attribut :attr:"
 "`__traceback__`, en lecture-écriture. Vous pouvez créer une exception et "
 "définir votre propre trace d'appels d'un seul coup en utilisant la méthode "
-"des exceptions :meth:`with_traceback` (qui renvoie la même instance "
-"d'exception avec sa trace d'appels passée en argument), comme ceci ::"
+"des exceptions :meth:`~BaseException.with_traceback` (qui renvoie la même "
+"instance d'exception avec sa trace d'appels passée en argument), comme "
+"ceci ::"
 
 #: reference/simple_stmts.rst:591
 msgid ""
@@ -863,7 +864,6 @@ msgstr ""
 "exceptions sont affichées ::"
 
 #: reference/simple_stmts.rst:615
-#, fuzzy
 msgid ""
 "A similar mechanism works implicitly if a new exception is raised when an "
 "exception is already being handled.  An exception may be handled when an :"
@@ -871,10 +871,12 @@ msgid ""
 "statement, is used.  The previous exception is then attached as the new "
 "exception's :attr:`__context__` attribute::"
 msgstr ""
-"Un mécanisme similaire est mis en œuvre implicitement si une exception est "
-"levée à l'intérieur d'un gestionnaire d'exception ou d'une clause :keyword:"
-"`finally` : la première exception est rattachée à l'attribut :attr:"
-"`__context__` de la nouvelle exception ::"
+"Un mécanisme similaire est mis en œuvre implicitement si une nouvelle "
+"exception est levée alors qu'une exception est déjà en cours de traitement. "
+"Une exception peut être traitée quand une clause :keyword:`except` ou :"
+"keyword:`finally`, une instruction :keyword:`with`, est utilisée. La "
+"première exception est alors rattachée à l'attribut :attr:`__context__` de "
+"la nouvelle exception ::"
 
 #: reference/simple_stmts.rst:636
 msgid ""
@@ -1010,8 +1012,9 @@ msgstr ""
 "clauses étaient séparées dans des instructions d'importations individuelles."
 
 #: reference/simple_stmts.rst:753
+#, fuzzy
 msgid ""
-"The details of the first step, finding and loading modules are described in "
+"The details of the first step, finding and loading modules, are described in "
 "greater detail in the section on the :ref:`import system <importsystem>`, "
 "which also describes the various types of packages and modules that can be "
 "imported, as well as all the hooks that can be used to customize the import "
@@ -1406,7 +1409,6 @@ msgstr ""
 "utilisés, dans le même bloc de code, avant l'instruction :keyword:`!global`."
 
 #: reference/simple_stmts.rst:955
-#, fuzzy
 msgid ""
 "Names listed in a :keyword:`global` statement must not be defined as formal "
 "parameters, or as targets in :keyword:`with` statements or :keyword:`except` "
@@ -1414,9 +1416,10 @@ msgid ""
 "function definition, :keyword:`import` statement, or variable annotation."
 msgstr ""
 "Les noms listés dans l'instruction :keyword:`global` ne doivent pas être "
-"définis en tant que paramètre formel, cible d'une boucle :keyword:`for`, "
-"dans une définition de :keyword:`class`, de fonction, d'instruction :keyword:"
-"`import` ou une annotation de variable."
+"définis en tant que paramètre formel, cible d'une instruction :keyword:"
+"`with` ou d'une clause :keyword:`except`, ni dans la liste cible d'une "
+"boucle :keyword:`for`, dans une définition de :keyword:`class`, de fonction, "
+"d'instruction :keyword:`import` ou une annotation de variable."
 
 #: reference/simple_stmts.rst:962
 msgid ""
@@ -1453,7 +1456,7 @@ msgstr ""
 msgid "The :keyword:`!nonlocal` statement"
 msgstr "L'instruction :keyword:`!nonlocal`"
 
-#: reference/simple_stmts.rst:995
+#: reference/simple_stmts.rst:991
 msgid ""
 "The :keyword:`nonlocal` statement causes the listed identifiers to refer to "
 "previously bound variables in the nearest enclosing scope excluding globals. "
@@ -1469,7 +1472,7 @@ msgstr ""
 "lier à des variables en dehors de la portée locale du code mais sans avoir "
 "de portée globale (c'est-à-dire de niveau module)."
 
-#: reference/simple_stmts.rst:1005
+#: reference/simple_stmts.rst:997
 msgid ""
 "Names listed in a :keyword:`nonlocal` statement, unlike those listed in a :"
 "keyword:`global` statement, must refer to pre-existing bindings in an "
@@ -1482,7 +1485,7 @@ msgstr ""
 "existantes dans les portées englobantes (en effet, la portée dans laquelle "
 "devrait être créée la liaison ne peut pas être déterminée *a priori*)."
 
-#: reference/simple_stmts.rst:1010
+#: reference/simple_stmts.rst:1002
 msgid ""
 "Names listed in a :keyword:`nonlocal` statement must not collide with pre-"
 "existing bindings in the local scope."
@@ -1490,10 +1493,10 @@ msgstr ""
 "Les noms listés dans l'instruction :keyword:`nonlocal` ne doivent entrer en "
 "collision avec des liaisons déjà établies dans la portée locale."
 
-#: reference/simple_stmts.rst:1015
+#: reference/simple_stmts.rst:1007
 msgid ":pep:`3104` - Access to Names in Outer Scopes"
 msgstr ":pep:`3104` -- Accès à des noms en dehors de la portée locale"
 
-#: reference/simple_stmts.rst:1016
+#: reference/simple_stmts.rst:1008
 msgid "The specification for the :keyword:`nonlocal` statement."
 msgstr "Les spécifications pour l'instruction :keyword:`nonlocal`."
